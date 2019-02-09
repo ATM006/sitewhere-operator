@@ -1,0 +1,7 @@
+apiVersion: sitewhere.io/v1alpha1
+kind: SiteWhere
+metadata:
+  name: example-sitewhere
+spec:
+  # Add fields here
+  size: 3

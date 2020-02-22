@@ -10,17 +10,15 @@ import (
 // SiteWhereSpec defines the desired state of SiteWhere
 // +k8s:openapi-gen=true
 type SiteWhereSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
-	// Add custom validation using kubebuilder tags: https://book.kubebuilder.io/beyond_basics/generating_crd.html
+	// Size is the size of the memcached deployment
+	Size int32 `json:"size"`
 }
 
 // SiteWhereStatus defines the observed state of SiteWhere
 // +k8s:openapi-gen=true
 type SiteWhereStatus struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
-	// Add custom validation using kubebuilder tags: https://book.kubebuilder.io/beyond_basics/generating_crd.html
+	// Nodes are the names of the memcached pods
+	Nodes []string `json:"nodes"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object

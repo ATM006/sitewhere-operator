@@ -100,6 +100,11 @@ func (r *ReconcileSiteWhere) Reconcile(request reconcile.Request) (reconcile.Res
 		return reconcile.Result{}, err
 	}
 
+	// Ensure the deployment size is the same as the spec
+	size := instance.Spec.Size
+
+	reqLogger.Info("SiteWhere Size", size)
+
 	// Define a new Pod object
 	pod := newPodForCR(instance)
 

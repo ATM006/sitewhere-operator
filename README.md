@@ -1,5 +1,11 @@
 # SiteWhere Operator
 
+## Build the operator
+
+```console
+operator-sdk build docker.io/jorgevillaverde/sitewhere-operator:v0.1.0
+```
+
 ## Install the operator
 
 ### Create Service Account

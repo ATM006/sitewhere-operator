@@ -16,7 +16,7 @@ spec:
       containers:
         - name: sitewhere-operator
           # Replace this with the built image name
-          image: docker.io/sitewhere/sitewhere-operator
+          image: jorgevillaverde/sitewhere-operator:v0.1.0
           command:
           - sitewhere-operator
           imagePullPolicy: Always
